@@ -11,8 +11,8 @@
     </tr>
     <tr>
         <td>
-            <a href="https://github.com/MoamenEltouny/laravel-assistant/blob/main/src/Traits/Eloquent/Attributable.php">
-                MoamenEltouny\Laravel\Assistant\Traits\Eloquent\Attributable
+            <a href="https://github.com/Pharaonic/laravel-assistant/blob/main/src/Traits/Eloquent/Attributable.php">
+                Pharaonic\Laravel\Assistant\Traits\Eloquent\Attributable
             </a>
         </td>
         <td>

@@ -1,6 +1,6 @@
 <?php
 
-namespace MoamenEltouny\Laravel\Assistant\Classes\Eloquent;
+namespace Pharaonic\Laravel\Assistant\Classes\Eloquent;
 
 class AttributableItem
 {

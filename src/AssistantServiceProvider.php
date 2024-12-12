@@ -1,6 +1,6 @@
 <?php
 
-namespace MoamenEltouny\Laravel\Assistant;
+namespace Pharaonic\Laravel\Assistant;
 
 use Illuminate\Support\ServiceProvider;
 

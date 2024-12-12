@@ -1,5 +1,5 @@
 {
-    "name": "moameneltouny/laravel-assistant",
+    "name": "pharaonic/laravel-assistant",
     "description": "Laravel - Helpers, Traits, Middlewares, Commands, and more.",
     "keywords": [
         "php",
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MoamenEltouny\\Laravel\\Assistant\\": "src"
+            "Pharaonic\\Laravel\\Assistant\\": "src"
         },
         "files": [
             "src/Helpers.php"

@@ -1,8 +1,8 @@
 <?php
 
-namespace MoamenEltouny\Laravel\Assistant\Traits\Eloquent;
+namespace Pharaonic\Laravel\Assistant\Traits\Eloquent;
 
-use MoamenEltouny\Laravel\Assistant\Classes\Eloquent\AttributableItem;
+use Pharaonic\Laravel\Assistant\Classes\Eloquent\AttributableItem;
 
 /**
  * @method AddAttributable(string $name, $value = null, callable $accessor = null, callable $mutator = null)
