@@ -26,6 +26,13 @@
             "src/Helpers.php"
         ]
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pharaonic\\Laravel\\Assistant\\AssistantServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

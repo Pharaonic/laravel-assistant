@@ -2,6 +2,7 @@
 
 namespace Pharaonic\Laravel\Assistant;
 
+use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AssistantServiceProvider extends ServiceProvider
@@ -23,6 +24,6 @@ class AssistantServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // 
+        AboutCommand::add('Pharaonic', fn() => ['Assistant' => '1.0.0']);
     }
 }
