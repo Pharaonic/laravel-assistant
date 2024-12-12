@@ -71,6 +71,29 @@ trait Attributable
     }
 
     /**
+     * Get all attributables.
+     *
+     * @return array
+     */
+    public function getAttributables()
+    {
+        return $this->attributables;
+    }
+
+    /**
+     * Get all dirty attributables.
+     *
+     * @return void
+     */
+    public function getDirtyAttributables()
+    {
+        return array_filter(
+            $this->attributables,
+            fn($attributable) => $attributable->isDirty()
+        );
+    }
+
+    /**
      * Clear all attributables.
      *
      * @return void
