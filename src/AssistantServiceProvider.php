@@ -24,6 +24,7 @@ class AssistantServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        AboutCommand::add('Pharaonic', fn() => ['Assistant' => '1.0.0']);
+        // Information
+        AboutCommand::add('Pharaonic', fn() => ['Assistant' => '1.x']);
     }
 }
