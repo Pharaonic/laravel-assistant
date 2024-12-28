@@ -1,6 +1,6 @@
 <?php
 
-namespace Pharaonic\Laravel\Assistant\Resources;
+namespace Pharaonic\Laravel\Assistant\Timezone;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Auth;
