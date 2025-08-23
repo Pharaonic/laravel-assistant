@@ -14,17 +14,24 @@ class AssistantServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // 
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'pharaonic.assistant');
     }
 
     /**
      * Bootstrap services.
      *
      * @return void
-     */
+    */
     public function boot()
     {
-        // Information
-        AboutCommand::add('Pharaonic', fn() => ['Assistant' => '1.x']);
+        if ($this->app->runningInConsole()) {
+            AboutCommand::add('Pharaonic', fn () => ['Assistant' => '2.x']);
+
+            $this->publishes(
+                [__DIR__.'/../config/config.php' => config_path('pharaonic/assistant.php')],
+                ['config', 'pharaonic', 'assistant']
+            );
+
+        }
     }
 }
