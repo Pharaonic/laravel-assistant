@@ -20,7 +20,7 @@ class AssistantServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'pharaonic.assistant');
+        $this->mergeConfigFrom(__DIR__.'/../config/assistant.php', 'pharaonic.assistant');
     }
 
     /**
@@ -34,7 +34,7 @@ class AssistantServiceProvider extends ServiceProvider
             AboutCommand::add('Pharaonic', fn () => ['Assistant' => '2.x']);
 
             $this->publishes(
-                [__DIR__.'/../config/config.php' => config_path('pharaonic/assistant.php')],
+                [__DIR__.'/../config/assistant.php' => config_path('pharaonic/assistant.php')],
                 ['config', 'pharaonic', 'assistant']
             );
         }
