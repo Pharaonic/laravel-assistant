@@ -5,6 +5,7 @@ namespace Pharaonic\Laravel\Assistant;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\ServiceProvider;
+use Pharaonic\Laravel\Assistant\Http\Resources\Json\FileableResourceMixin;
 use Pharaonic\Laravel\Assistant\Http\Resources\Json\TimeableResourceMixin;
 
 class AssistantServiceProvider extends ServiceProvider
@@ -38,6 +39,11 @@ class AssistantServiceProvider extends ServiceProvider
         // Timeable Feature
         if (config('pharaonic.assistant.timeable')) {
             JsonResource::mixin(new TimeableResourceMixin());
+        }
+
+        // Fileable Feature
+        if (config('pharaonic.assistant.fileable')) {
+            JsonResource::mixin(new FileableResourceMixin());
         }
     }
 }
