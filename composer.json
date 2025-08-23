@@ -1,6 +1,6 @@
 {
     "name": "pharaonic/laravel-assistant",
-    "description": "Laravel - Helpers, Traits, Middlewares, Commands, and more.",
+    "description": "Laravel Assistant provides a set of helper functions and traits and more to enhance Laravel application development.",
     "keywords": [
         "php",
         "laravel",
@@ -15,15 +15,15 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
-        "laravel/framework": ">=9.0"
+        "php": "^8.2",
+        "laravel/framework": "^12.0"
     },
     "autoload": {
         "psr-4": {
             "Pharaonic\\Laravel\\Assistant\\": "src"
         },
         "files": [
-            "src/Helpers.php"
+            "src/helpers.php"
         ]
     },
     "extra": {
