@@ -5,11 +5,13 @@ namespace Pharaonic\Laravel\Assistant;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Pagination\LengthAwarePaginator as LaravelLengthAwarePaginator;
 use Illuminate\Support\ServiceProvider;
 use Pharaonic\Laravel\Assistant\Http\Requests\TranslatableFormRequestMixin;
 use Pharaonic\Laravel\Assistant\Http\Resources\Json\FileableResourceMixin;
 use Pharaonic\Laravel\Assistant\Http\Resources\Json\TimeableResourceMixin;
 use Pharaonic\Laravel\Assistant\Http\Resources\Json\TranslatableResourceMixin;
+use Pharaonic\Laravel\Assistant\Pagination\LengthAwarePaginator;
 
 class AssistantServiceProvider extends ServiceProvider
 {
@@ -53,6 +55,11 @@ class AssistantServiceProvider extends ServiceProvider
         if (config('pharaonic.assistant.translatable')) {
             JsonResource::mixin(new TranslatableResourceMixin());
             FormRequest::mixin(new TranslatableFormRequestMixin());
+        }
+
+        // Pagination Feature
+        if (config('pharaonic.assistant.pagination')) {
+            $this->app->bind(LaravelLengthAwarePaginator::class, LengthAwarePaginator::class);
         }
     }
 }
