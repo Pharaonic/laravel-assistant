@@ -14,8 +14,6 @@ use Illuminate\Support\Str;
 abstract class BaseFilter
 {
     /**
-     * The request instance.
-     *
      * @var Request
      */
     protected $request;
@@ -47,7 +45,7 @@ abstract class BaseFilter
     /**
      * Apply the filters.
      *
-     * @param  Builder $builder
+     * @param Builder $builder
      * @return Builder
      */
     final public function apply(Builder $builder)
@@ -82,9 +80,9 @@ abstract class BaseFilter
     /**
      * check if value is in list and return it, otherwise return default
      *
-     * @param  mixed $value
-     * @param  array $list
-     * @param  mixed $default
+     * @param $value
+     * @param array $list
+     * @param $default
      * @return mixed|null
      */
     final public function default($value, array $list, $default = null)
